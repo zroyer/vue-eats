@@ -35,5 +35,15 @@
         "appearance": ""
       }
     }
+  },
+  "restaurant": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": "WYSIWYG"
+      }
+    }
   }
 }
