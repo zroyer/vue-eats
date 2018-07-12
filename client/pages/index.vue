@@ -20,7 +20,7 @@
               </router-link>
             </div>
           </li>
-          <p v-if="!filteredList.length">No results :(</p>
+          <p v-if="!filteredList.length">No results 😟</p>
         </ul>
       </div>
     </div>
