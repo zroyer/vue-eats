@@ -1,11 +1,24 @@
+type Dish {
+  _id: ID!
+  createdAt: String!
+  updatedAt: String!
+  name: String
+  description: String
+  image: UploadFile
+  price: Float
+  restaurant: Restaurant
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
 scalar JSON
 
-union Morph = Restaurant | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+union Morph = Dish | Restaurant | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
 
 type Query {
+  dish(id: ID!): Dish
+  dishes(sort: String, limit: Int, start: Int, where: JSON): [Dish]
   restaurant(id: ID!): Restaurant
   restaurants(sort: String, limit: Int, start: Int, where: JSON): [Restaurant]
   files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
@@ -26,6 +39,7 @@ type Restaurant {
   name: String
   description: String
   image: UploadFile
+  dishes(sort: String, limit: Int, start: Int, where: JSON): [Dish]
 }
 
 type UploadFile {

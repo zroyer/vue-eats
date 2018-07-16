@@ -45,5 +45,18 @@
         "appearance": "WYSIWYG"
       }
     }
+  },
+  "dish": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "price": {
+        "appearance": ""
+      }
+    }
   }
 }

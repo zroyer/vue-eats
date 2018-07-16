@@ -2,7 +2,7 @@
   "connection": "default",
   "collectionName": "",
   "info": {
-    "name": "restaurant",
+    "name": "dish",
     "description": ""
   },
   "options": {
@@ -20,9 +20,12 @@
       "via": "related",
       "plugin": "upload"
     },
-    "dishes": {
-      "collection": "dish",
-      "via": "restaurant"
+    "price": {
+      "type": "float"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "dishes"
     }
   }
 }
