@@ -16,12 +16,12 @@
           </li>
           <li v-if="!username">
             <router-link v-if="!username" tag="a" class="nav-link" to="/signin" exact>
-              Signin
+              Sign In
             </router-link>
           </li>
           <li v-if="!username">
             <router-link v-if="!username" tag="a" class="nav-link" to="/signup" exact>
-              Signup
+              Sign Up
             </router-link>
           </li>
         </ul>

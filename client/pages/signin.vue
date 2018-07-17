@@ -26,9 +26,9 @@
         </div>
         <button :disabled="loading" type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
         <p class="text-center mt-3">
-          No account yet
+          Need an account?
           <router-link :to="{ name: 'signup'}" tag="a">
-            Register
+            Sign Up
           </router-link>
         </p>
       </form>
