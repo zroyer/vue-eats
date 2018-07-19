@@ -11,7 +11,7 @@
                 <h5 class="card-title">{{ dish.name }}</h5>
                 <p class="card-text">{{ dish.description || 'No description provided.' }}</p>
                 <p class="card-text">${{ dish.price }}</p>
-                <button class="btn btn-primary" @click="addToCart(dish)">Add to cart</button>
+                <button class="btn btn-primary" @click="addToCart(dish)">Add</button>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
               <h5 class="card-text">
                 Total: ${{ price }}
               </h5>
-              <button :disabled="!selectedDishes.length" class="btn btn-primary">Order!</button>
+              <button :disabled="!selectedDishes.length" class="btn btn-primary" @click="goToCheckout">Order!</button>
             </div>
           </div>
         </div>
@@ -109,7 +109,16 @@ export default {
       addToCart: 'cart/add',
       removeFromCart: 'cart/remove',
       emptyCart: 'cart/emptyList'
-    })
+    }),
+    goToCheckout() {
+      const isConnected = this.$store.getters['auth/username']
+      console.log(isConnected)
+      if (!isConnected) {
+        this.$router.push('/signin')
+        return
+      }
+      this.$router.push('/checkout')
+    },
   }
 }
 </script>

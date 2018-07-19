@@ -14,11 +14,25 @@ The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://
 """
 scalar JSON
 
-union Morph = Dish | Restaurant | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+union Morph = Dish | Order | Restaurant | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+
+type Order {
+  _id: ID!
+  createdAt: String!
+  updatedAt: String!
+  address: String
+  city: String
+  state: String
+  zipCode: String
+  dishes: String
+  total: Float
+}
 
 type Query {
   dish(id: ID!): Dish
   dishes(sort: String, limit: Int, start: Int, where: JSON): [Dish]
+  order(id: ID!): Order
+  orders(sort: String, limit: Int, start: Int, where: JSON): [Order]
   restaurant(id: ID!): Restaurant
   restaurants(sort: String, limit: Int, start: Int, where: JSON): [Restaurant]
   files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]

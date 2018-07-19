@@ -58,5 +58,27 @@
         "appearance": ""
       }
     }
+  },
+  "order": {
+    "attributes": {
+      "address": {
+        "appearance": ""
+      },
+      "city": {
+        "appearance": ""
+      },
+      "state": {
+        "appearance": ""
+      },
+      "zipCode": {
+        "appearance": ""
+      },
+      "dishes": {
+        "appearance": ""
+      },
+      "total": {
+        "appearance": ""
+      }
+    }
   }
 }

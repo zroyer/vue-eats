@@ -21,7 +21,8 @@
   "dependencies": {
     "lodash": "4.x.x",
     "strapi": "3.0.0-alpha.12.7.1",
-    "strapi-mongoose": "3.0.0-alpha.12.7.1"
+    "strapi-mongoose": "3.0.0-alpha.12.7.1",
+    "stripe": "^6.3.0"
   },
   "author": {
     "name": "zach",
