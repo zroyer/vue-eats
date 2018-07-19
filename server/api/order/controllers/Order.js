@@ -57,7 +57,7 @@ module.exports = {
   create: async (ctx) => {
     const {
       dishes,
-      total,
+      amount,
       address,
       city,
       state,
@@ -66,7 +66,7 @@ module.exports = {
     } = ctx.request.body;
 
     const charge = await stripe.charges.create({
-      total: total * 100,
+      amount: amount * 100,
       currency: 'usd',
       description: `Order ${new Date()} by ${ctx.state.user._id}`,
       source: token,
@@ -75,7 +75,7 @@ module.exports = {
     const order = await strapi.services.order.add({
       user: ctx.state.user._id,
       dishes,
-      total,
+      amount,
       address,
       city,
       state,
