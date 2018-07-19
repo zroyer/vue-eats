@@ -37,16 +37,6 @@
                 required/>
             </div>
             <div class="form-group">
-              <label for="zipCode">Postal Code</label>
-              <b-form-input
-                id="zipCode"
-                v-model="zipCode"
-                type="text"
-                autofocus="true"
-                placeholder="Enter your postal code"
-                required/>
-            </div>
-            <div class="form-group">
               <label for="city">City</label>
               <b-form-input
                 id="city"
@@ -65,6 +55,16 @@
                 autofocus="true"
                 placeholder="Enter your state"
                 required/>
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Postal Code</label>
+              <b-form-input
+              id="zipCode"
+              v-model="zipCode"
+              type="text"
+              autofocus="true"
+              placeholder="Enter your postal code"
+              required/>
             </div>
             <div class="form-group">
               <label for="card">Credit Card</label>
